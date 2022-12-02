@@ -1,6 +1,6 @@
 class PostSerializer < ActiveModel::Serializer
-  attributes :title, :content, :short_content
-  belongs_to :author
+  attributes :title, :content, :short_content, :tags
+  has_one :author
   has_many :tags
 
   def short_content
